@@ -21,4 +21,19 @@ public class VanishAPI {
             }
         }
     }
+
+    public void leave(Player player) {
+        for (Player player1 : Bukkit.getOnlinePlayers()) {
+            player1.showPlayer(player);
+            logger(player);
+
+        }
+    }
+
+    public void logger(Player staff) {
+        Bukkit.getOnlinePlayers().forEach(staff1 -> {
+            if (staff.hasPermission(permission))
+                staff1.sendMessage("§b§lKisko§f§lMC§7: §7Pelaaja " + staff.getName() + " poistu vanishtilalta.");
+        });
+    }
 }
