@@ -31,11 +31,14 @@ public class Vanish extends Command {
                 }
                 if(strings[0].equalsIgnoreCase("off")){
                     api.leave(player);
+                    return true;
                 }
             }
 
 
 
+        }else{
+            commandSender.sendMessage("§cOnly in-game!");
         }
         return false;
     }
